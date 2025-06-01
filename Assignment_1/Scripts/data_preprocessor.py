@@ -32,7 +32,7 @@ def remove_duplicates(data):
 # 3. Normalize Numerical Data
 def normalize_data(data,method='minmax'):
     df = data.copy()
-    numeric_cols = df.select_dtypes(include=[np.number]).columns
+    numeric_cols = df.select_dtypes(include=[np.number]).columns.drop('target', errors='ignore')
     if method == 'minmax':
         scaler = MinMaxScaler()
     elif method == 'standard':
