@@ -25,13 +25,9 @@ def impute_missing_values(data, strategy='mean'):
 
 # 2. Remove Duplicates
 def remove_duplicates(data):
-    """
-    Remove duplicate rows from the dataset.
-    :param data: pandas DataFrame
-    :return: pandas DataFrame
-    """
-    # TODO: Remove duplicate rows
-    pass
+    cleaned_data = data.copy()
+    cleaned_data = cleaned_data.drop_duplicates()
+    return cleaned_data
 
 # 3. Normalize Numerical Data
 def normalize_data(data,method='minmax'):
