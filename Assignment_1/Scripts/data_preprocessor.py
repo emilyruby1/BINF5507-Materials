@@ -44,13 +44,11 @@ def normalize_data(data,method='minmax'):
 
 # 4. Remove Redundant Features   
 def remove_redundant_features(data, threshold=0.9):
-    """Remove redundant or duplicate columns.
-    :param data: pandas DataFrame
-    :param threshold: float, correlation threshold
-    :return: pandas DataFrame
-    """
-    # TODO: Remove redundant features based on the correlation threshold (HINT: you can use the corr() method)
-    pass
+    numeric_data = data.select_dtypes(include=[np.number])  # keep only numeric columns
+    corr_matrix = numeric_data.corr().abs()
+    upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
+    to_drop = [column for column in upper.columns if any(upper[column] > threshold)]
+    return data.drop(columns=to_drop)
 
 # ---------------------------------------------------
 
