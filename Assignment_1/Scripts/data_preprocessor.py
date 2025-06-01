@@ -8,14 +8,20 @@ from sklearn.metrics import classification_report, accuracy_score
 
 # 1. Impute Missing Values
 def impute_missing_values(data, strategy='mean'):
-    """
-    Fill missing values in the dataset.
-    :param data: pandas DataFrame
-    :param strategy: str, imputation method ('mean', 'median', 'mode')
-    :return: pandas DataFrame
-    """
-    # TODO: Fill missing values based on the specified strategy
-    pass
+    df = data.copy()
+    for col in df.columns:
+        if df[col].isnull().any():
+            if strategy == 'mean' and pd.api.types.is_numeric_dtype(df[col]):
+                df[col] = df[col].fillna(df[col].mean())
+            elif strategy == 'median' and pd.api.types.is_numeric_dtype(df[col]):
+                df[col] = df[col].fillna(df[col].median())
+            else:
+                mode_value = df[col].mode().dropna()
+                if not mode_value.empty:
+                    df[col] = df[col].fillna(mode_value[0])
+    
+    return df
+
 
 # 2. Remove Duplicates
 def remove_duplicates(data):
