@@ -7,3 +7,5 @@
 # Dataset preprocessing chol and num columns
 
 # splitting train and test sets for regression and classification then standarizing daat using StandardScaler
+
+# processing for an ElasticNet regression model to evaluate each model performace on test data
