@@ -13,3 +13,7 @@
 # creation of heatmap to visualize alpha and l1_ratio effect on performance
 
 # evaluating k-NN and measuring AUROC and AUPRC
+
+# compare the performance of logistic regression models
+
+# Evaluating and visualizing the performace of the classificaiton model using ROC and PR curves
