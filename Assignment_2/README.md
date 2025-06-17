@@ -4,4 +4,6 @@
 
 # opened data set in notebook
 
-# 
+# Dataset preprocessing chol and num columns
+
+
