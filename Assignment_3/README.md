@@ -5,3 +5,4 @@
 # Standardizing both datasets features 
 # Clustering function, and applyiing the clustering to each of the datasets
 # Creating and saving scatter plots for clustering 
+# Generating and saving plots
