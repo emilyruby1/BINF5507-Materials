@@ -2,3 +2,4 @@
 # Uploaded libraries required for future coding
 # Generating moons dataset
 # Generating blobs dataset
+# Standardizing both datasets features 
