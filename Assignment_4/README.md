@@ -7,3 +7,4 @@
 # Kaplan-Meier Analysis for Stage (of cancer diagnosis)
 # Log-rank test for stage group
 # encoding categorical variables for cox proportional hazards model
+# Check assumptions
