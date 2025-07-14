@@ -6,3 +6,4 @@
 # Log-rank test for chemo treated vs nontreated group
 # Kaplan-Meier Analysis for Stage (of cancer diagnosis)
 # Log-rank test for stage group
+# encoding categorical variables for cox proportional hazards model
